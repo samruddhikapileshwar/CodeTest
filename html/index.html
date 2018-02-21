@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="filmApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>film</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body ng-controller="filmCtrl as vm">
+    <div class="grid" ng-repeat="film in vm.films">
+        <div ng-bind-html="film.renditions.rendition[0].url"></div>
+        <h3 class="title">{{film.title}}</h3>
+    </div>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/angular-sanitize.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/service.js"></script>
+</body>
+</html>
